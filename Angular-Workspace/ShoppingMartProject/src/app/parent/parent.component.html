@@ -1,0 +1,9 @@
+<div class="container" style="background-color: aqua; color: brown; height: 600px ;">
+    <h1>Parent Data</h1>
+
+<div>
+    <p>{{receivedMsg}}</p>
+
+</div>
+    <app-child (sendDataToParent)="getDataFromChild($event)" [msg]="wishMessage"></app-child>
+</div>

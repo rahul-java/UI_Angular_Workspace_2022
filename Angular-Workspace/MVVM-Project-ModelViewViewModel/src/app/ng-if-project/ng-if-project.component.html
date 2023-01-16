@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header  text-center prod-temp">
+                <h1>ngIf Project : Product Details</h1>
+            </div>
+            <div class="card-body">
+          
+        <div class="row bdr" >
+            <div class="col-1">
+                
+            </div>
+            <div class="col-10 text-center">
+               
+                <button class="btn prod-temp" (click)="toggleBtn()">Show {{textBtn}}</button>
+            
+            </div>
+            <div class="col-1">
+                
+            </div>
+            
+            
+            
+        </div><br>
+        
+          
+            <div class="row bdr" >
+                <div class="col-4">
+                    
+                </div>
+                
+                <div class="col-4 text-center ">
+                    <div *ngIf="isPresent; then thenBlock else elseBlock">
+    
+                    </div>
+                    <ng-template #Details>
+                      <table>
+                        <dl >
+                            <dt>Product Id :</dt>
+                            <dd>101</dd>
+    
+                            <dt>Product Name :</dt>
+                            <dd>macbook-pro</dd>
+    
+                            <dt>Product Cost :</dt>
+                            <dd>{{149000 |currency:'INR'}}</dd>
+                        </dl>
+                      </table>
+                    </ng-template>
+                    <ng-template #Preview >
+                      
+                        <img src="assets/images/macbook.jfif">
+                     
+                    </ng-template>
+                    <ng-template #elseBlock>
+    
+                    </ng-template>
+                </div>
+                <div class="col-4">
+                    
+                </div>
+                
+                
+                
+            </div><br>
+    
+    </div>
+    <div class="card-footer prod-temp">
+        <span ></span>
+    </div>
+   </div>
+ </div>
+ 
+</body>
+</html>

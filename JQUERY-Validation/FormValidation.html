@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+
+      <input type="text" name="userName" id="userId">  
+      <span id="errorName"></span>
+    </div>
+
+    <script>
+
+        $(document).ready(function(){
+
+            //hide error section
+            $('#errorName').hide();
+            
+            //define error section
+            var errorName=false;
+
+            //validate function
+            function validate_name(){
+               //validate logic
+               var name=$('#userId').val();
+               if(name=='')
+               {
+                $('#errorName').show();
+                $('#errorName').text("Enter User Name Here");
+                $('#errorName').css('color','red')
+                errorName=false;
+               }
+               else{
+                $('#errorName').hide();
+                errorName=true;
+               }
+                return errorName;
+            }
+            
+            //link input with action event : call validate function
+            $('#userId').keyup(function(){
+                validate_name();
+            });
+
+        });
+    </script>
+</body>
+</html>

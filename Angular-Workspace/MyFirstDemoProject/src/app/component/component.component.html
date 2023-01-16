@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Interpolation One Directional -->
+    <div class="container">
+        <h1 class="bg-primary text-white text-center">Interpolation One Directional</h1>
+        <h2>Device Details</h2>
+        <dl>
+            <dt>ID</dt>
+            <dd>{{Device.id}}</dd>
+
+            <dt>NAME</dt>
+            <dd>{{Device.name}}</dd>
+
+            <dt>COST</dt>
+            <dd>{{Device.cost}}</dd>
+
+            <dt>InStock</dt>
+            <dd>{{(Device.inStock)?"Available":"Out Of Stock"}}</dd>
+        </dl>
+        <button class="btn btn-success">Submit</button>
+        {{Device.disableBtn}}
+    </div>
+</body>
+</html>

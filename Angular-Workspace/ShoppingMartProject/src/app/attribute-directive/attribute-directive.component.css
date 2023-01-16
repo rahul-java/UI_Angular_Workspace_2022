@@ -1,0 +1,38 @@
+.tc{
+    color: white;
+    background-color: darkcyan;
+    
+}
+.addEffect{
+    background-color: darkgoldenrod;
+    color: aliceblue;
+    border: 3px solid darkolivegreen;
+    text-align: center;
+    
+}
+.dark{
+    background-color: rgb(2, 75, 24);
+    color: white;
+    border: 5px solid rgb(116, 8, 17);
+    text-align: center;
+    padding: 5px;
+    
+}
+.light{
+    background-color: rgb(11, 184, 175);
+    color: rgb(100, 11, 88);
+    border: 5px solid rgb(107, 91, 47);
+    text-align: center;
+    padding: 5px;
+}
+
+.center-c{
+    color: brown;
+    text-align: center;
+}
+.border-b{
+    border: 5px solid green;
+}
+.shadow-s{
+    box-shadow: 5px 10px 10px rgb(75, 202, 75);
+}

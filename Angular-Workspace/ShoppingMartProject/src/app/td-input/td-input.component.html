@@ -1,0 +1,57 @@
+<div class="container mt-4">
+
+    <div class="row">
+        <div class="col-6">
+            <form #regForm="ngForm">
+                <h1>User Registration</h1>
+                <dl>
+                    <dt>User Name:</dt>
+                    <dd>
+                        <input type="text" ngModel name="username" #username="ngModel" class="form-control"
+                         required minlength="4" maxlength="8" pattern="[A-Z]*">
+                    </dd>
+                    <dd class="text-danger" *ngIf="regForm.submitted ||(username.invalid && username.touched)">
+                        <span *ngIf="username.errors?.['required']">Enter User Name</span>
+                        <span *ngIf="username.errors?.['minlength']">Atleasr 4 Characters</span>
+                        <span *ngIf="username.errors?.['pattern']">Enter Capital Letters Only</span>
+                    </dd>
+        
+                    <dt>User Email:</dt>
+                    <dd>
+                        <input type="text" ngModel name="email" #email="ngModel" class="form-control">
+                    </dd>
+
+                    <dt>Select Country:</dt>
+                    <dd>
+                        <select class=" form-select" (change)="OnCountryChange($event)" 
+                            name="country" ngModel #country="ngModel">
+                           <option value="-1">--SELECT--</option>
+                           <option value="INDIA">INDIA</option>
+                           <option value="USA">USA</option>
+                           <option value="BRITAIN">BRITAIN</option>
+                           <option value="GERMANY">GERMANY</option>
+                           <option value="FRANCE">FRANCE</option>
+                        </select>
+                    </dd>
+                    <dd class="text-danger" *ngIf="isInvalid && country.touched">
+                        <span>Select Country</span>
+                    </dd>
+        
+                    <dt>Password:</dt>
+                    <dd>
+                        <input type="text" ngModel name="password" #password="ngModel" class="form-control"
+                        required maxlength="8">
+                    </dd>
+                    <dd class="text-danger" *ngIf="regForm.submitted||(password.invalid && password.touched)">
+                        <span *ngIf="password.errors?.['required']">Enter Password</span>
+                    </dd>
+        
+                    <button class="btn-c1" type="submit">Submit</button>
+        
+                    
+                </dl>
+            </form>
+        </div>
+        
+    </div>
+</div>

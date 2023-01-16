@@ -1,0 +1,20 @@
+<script>
+
+function super_class(){
+
+}
+super_class.prototype.v1="Hi Friends...Welcome to Super Class...";
+function sub_class(){
+
+}
+
+//inheriting supper class by sub class
+
+sub_class.prototype=Object.create(super_class.prototype);
+let obj=new sub_class();
+sub_class.prototype.v2="Welcome to Sub Class...";
+sub_class.prototype.f1=function(){
+    return "Welcome to sub class method.......";
+}
+console.log(obj.v1,obj.v2,obj.f1());
+</script>

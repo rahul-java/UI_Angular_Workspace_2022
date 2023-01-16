@@ -1,0 +1,15 @@
+.tc{
+    color: white;
+    background-color: darkcyan;
+    
+}
+thead>tr{
+    background-color: darkcyan;
+    color: white;
+}
+.even-e{
+    background-color: aquamarine;
+}
+.odd-o{
+    background-color: cyan;
+}

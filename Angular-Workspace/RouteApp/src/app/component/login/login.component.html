@@ -1,0 +1,62 @@
+<div class="container mt-4">
+
+    <div class="row">
+        <div class="col-6">
+            <form #regForm="ngForm" (ngSubmit)="userRegData(regForm.value)"
+                  [ngClass]="{'bg-g':regForm.valid , 'bg-r':regForm.invalid}">
+                <h1>User Registration</h1>
+                <dl>
+                    <dt>User Name:</dt>
+                    <dd>
+                        <input type="text" ngModel name="username" #username="ngModel" class="form-control"
+                         required minlength="4" maxlength="8" pattern="[A-Z]*">
+                    </dd>
+        
+                    <dt>User Email:</dt>
+                    <dd>
+                        <input type="text" ngModel name="email" #email="ngModel" class="form-control">
+                    </dd>
+        
+                    <dt>Password:</dt>
+                    <dd>
+                        <input type="text" ngModel name="password" #password="ngModel" class="form-control"
+                        required maxlength="8">
+                    </dd>
+        
+                    <button [disabled]="regForm.invalid" class="btn-c1">Submit</button>
+        
+                    
+                </dl>
+            </form>
+        </div>
+        <div class="col-6">
+               <h1>Validation Details</h1>
+            <dl>
+                <dt>Pristine:</dt>
+                <dd>
+                    {{regForm.pristine}}
+                </dd>
+    
+                <dt>Dirty:</dt>
+                <dd>
+                    {{regForm.dirty}}
+                </dd>
+    
+                <dt>Valid:</dt>
+                <dd>
+                    {{regForm.valid}}
+                </dd>
+
+                <dt>InValid:</dt>
+                <dd>
+                    {{regForm.invalid}}
+                </dd>
+
+                <dt>Submitted:</dt>
+                <dd>
+                    {{regForm.submitted}}
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>

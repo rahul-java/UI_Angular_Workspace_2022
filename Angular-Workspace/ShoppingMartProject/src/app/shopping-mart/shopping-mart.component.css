@@ -1,0 +1,13 @@
+.tc{
+    color: blanchedalmond;
+    background-color: darkcyan;
+    
+}
+.red{
+    color:rgb(255, 0, 0);
+}
+.bdr{
+    border: 3px solid darkcyan;
+    padding: 20px;
+    border-radius: 10px;
+}

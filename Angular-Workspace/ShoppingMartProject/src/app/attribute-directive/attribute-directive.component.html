@@ -1,0 +1,82 @@
+<div class="container mt-4">
+    
+    <div class="card">
+    
+    <div class="card-header tc text-center">
+        <h1>Attribute Directive : [ngClass]</h1>
+    </div>
+    <div class="card-body">
+
+        <div class="row mt-4">
+            <div class="col-3">
+                <label><h2>String Reference:</h2></label>
+            </div>
+            <div class="col-9">
+                <h2 [ngClass]="'addEffect'"> Hello Friends [ngClass]="'addEffect'"</h2>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-3">
+                <label><h2>Property Name:</h2></label>
+            </div>
+            <div class="col-9">
+                <h2 [ngClass]="className">Hello Friends [ngClass]="className"</h2>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-3"><h2>Select Thyme :</h2></div>
+            <div class="col-9">
+                <select class="form-control" [(ngModel)]="className1">
+                    <option value="addEffect">---Select---</option>
+                    <option value="dark">Dark</option>
+                   <option value="light">Light</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-9">
+                <h2 [ngClass]="className1">[(ngModel)]="className1" [ngClass]="className1"</h2>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-3">
+                <input type="text" readonly placeholder="Enter : border-b; center-c; shadow-s;" class="form-control"> 
+            </div>
+            <div class="col-9">
+                <h2  [ngClass]="['border-b','center-c','shadow-s']">Array Reference</h2>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-3">
+                <input type="text" [(ngModel)]="className2" placeholder="Enter : border-b; center-c; shadow-s;" class="form-control"> 
+            </div>
+            <div class="col-9">
+                <h2  [ngClass]="className2">Dynamic Array Reference</h2>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-3">
+                <ul>
+                    <li><input type="checkbox" [(ngModel)]="isCenter"> Center</li>
+                    <li><input type="checkbox" [(ngModel)]="isBorder"> Border</li>
+                    <li><input type="checkbox" [(ngModel)]="isShadow"> Shadow</li>
+                </ul>
+            </div>
+            <div class="col-9">
+                <h2  [ngClass]="{'center-c':isCenter,'border-b':isBorder,'shadow-s':isShadow}">Dynamic Checkbox Hello World</h2>
+            </div>
+        </div>
+        
+    </div>
+    <div class="card-footer tc">
+
+    </div>
+    
+    </div>
+    
+    

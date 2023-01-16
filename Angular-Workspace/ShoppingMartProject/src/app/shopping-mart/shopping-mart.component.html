@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card w-200">
+            <div class="card-header  text-center tc">
+                <h1><i class="fas fa-shopping-cart"></i> Online Shopping Mart</h1>
+            </div>
+           
+        <div class="card-body">
+          <div class="row">
+            <div class="col-3">
+                <!-- select category -->
+              <div class="form-group">
+                <h5>Select Category</h5>
+                <select (change)="OnCategoryChange()" class="form-control" [(ngModel)]="selectedCategory">
+                    <option *ngFor="let ctgry of category">
+                        {{ctgry}}
+                    </option>
+                </select>
+              </div>
+              <!-- select product -->
+              <div class="form-group">
+                <h5>Select Product</h5>
+                <select (change)="OnProductChange()" class="form-control" [(ngModel)]="selectedProduct">
+                    <option *ngFor="let product of Product">
+                        {{product}}
+                    </option>
+                </select>
+              </div>
+              <div class="form-group">
+                <h5>Preview</h5>
+                <div class="card">
+                  <div class="card-header tc text-white">
+                    <h6>{{searchProduct.name}}</h6>
+                    {{searchProduct.price | currency:'INR'}}
+                  </div>
+                  <div class="card-body">
+                     <img [src]="searchProduct.img"  class="img-fluid"> <!--  class="img-thumbnail" -->
+                  </div>
+                  <div class="card-footer">
+                     <button (click)="OnAddToCart()" class="btn btn-success w-100"><span class="fa-solid fa-cart-plus"></span>  Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <h5 class="tc text-center">Your Cart Items</h5>
+               <table *ngIf="isVisibleCartItems" class="table table-hover">
+                <thead>
+                   <tr>
+                     <th>Name</th>
+                     <th>Price</th>
+                     <th>Preview</th>
+                     <th>Option</th>
+                   </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of cartItems; let i=index">
+                    <td>{{item.name}}</td>
+                    <td>{{item.price}}</td>
+                    <td><img [src]="item.img" class="img-thumbnail" width="50" height="50"></td>
+                    <td><button (click)="OnRemoveItems(i)" class="fa-solid fa-trash-can btn red"></button></td>
+                  </tr>
+                </tbody>
+               </table>
+            </div>
+            <div class="col-3">
+                <button (click)="OnToggleCartBtn()" class="btn btn-success w-100"><i class="fa fa-shopping-cart"></i> ({{cartItemCount}}) Cart</button>
+            </div>
+          </div>
+        </div>
+    <div class="card-footer tc">
+        <span></span>
+    </div>
+   </div>
+ </div>
+ 
+</body>
+</html>

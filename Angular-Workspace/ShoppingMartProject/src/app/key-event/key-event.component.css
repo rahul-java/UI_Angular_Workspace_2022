@@ -1,0 +1,26 @@
+.tc{
+    color: white;
+    background-color: darkcyan;
+    text-align: center;
+}
+.f1{
+    color:darkcyan;
+    text-align: center;
+
+}
+.l1{
+    color: darkgreen;
+}
+.l2{
+    color: darkred;
+}
+
+form{
+    width: 600px;
+    border: 2px solid darkcyan;
+    border-radius: 10px;
+    margin-top: 40px;
+    box-shadow: 3px 4px 4px darkcyan;
+    padding: 20px;
+    margin: auto;
+}

@@ -1,0 +1,31 @@
+form{
+    border: 2px solid darkcyan;
+    border-radius: 10px;
+    padding: 50px;
+    width: 500px;
+    box-shadow: 0 0 10px darkcyan;
+}
+h1{
+    color: darkcyan;
+    font-size: xx-large;
+}
+
+dt{
+    color: darkcyan;
+    font-size: medium;
+}
+
+.btn-c1{
+    border: 2px solid darkcyan;
+    border-radius: 10px;
+    box-shadow: 0 0 10px darkcyan;
+    color: darkcyan;
+    font-size: medium;
+}
+
+.bg-r{
+    background-color: rgb(231, 208, 208);
+}
+.bg-g{
+    background-color: rgb(167, 228, 207);
+}

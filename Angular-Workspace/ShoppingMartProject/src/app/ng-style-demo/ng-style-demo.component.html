@@ -1,0 +1,55 @@
+<div class="container mt-4">
+    
+    <div class="card">
+    
+    <div class="card-header tc text-center">
+        <h1>Attribute Directive : [ngStyle]</h1>
+    </div>
+    <div class="card-body">
+
+        <div class="row mt-4">
+            <div class="col-5">
+                <div class="form-group">
+                    <div class="row">
+                        <label><h5>Background Color :</h5></label>
+                        <div>
+                            <input type="color" [(ngModel)]="ColorCode" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label><h5>Text Color :</h5></label>
+                        <div>
+                            <input type="color" [(ngModel)]="TextColorCode" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label><h5>Alignment :</h5></label>
+                        
+                            <select [(ngModel)]="TextAlignment" class="form-select ">
+                                <option selected>Select Alignment</option>
+                                <option>Center</option>
+                                <option>Left</option>
+                                <option>Right</option>
+                            </select>
+                        
+                    </div>
+                    <div class="row mt-5">
+                        <button (click)="applyEffects()" class="btn btn-info">Apply Effects</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-7">
+                <h1 [ngStyle]="objStyle">Hello Friends...</h1>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+    <div class="card-footer tc">
+
+    </div>
+    
+    </div>
+    
+    

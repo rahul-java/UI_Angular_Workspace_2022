@@ -1,0 +1,34 @@
+<!-- <script>
+
+function class_one(){
+    this.one="Rahul";
+    this.two="Kumar";
+    this.three="Pandey";
+}
+let obj1=new class_one();
+console.log(obj1.one,obj1.two,obj1.three);
+
+</script> -->
+
+<script>
+
+function first_class(){
+    this.one="One";
+    this.two="Two";
+
+    this.f1=function(){
+        return this.one;
+    }
+
+    this.f2=function(){
+        return this.two;
+    }
+
+    this.f3=function(param){
+        return param;
+    }
+}
+let obj=new first_class();
+console.log(obj.f1(),obj.f2(),obj.f3("Three"));
+
+</script>

@@ -1,0 +1,57 @@
+<div class="container">
+    
+    <div class="card">
+    
+    <div class="card-header tc text-center">
+        <h1>Key-Event: Register Page</h1>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-2">
+            </div>
+
+            <div class="col-8 " >
+                <form>
+                    <h1 class="f1">Login Here</h1>
+                    <div class="form-group">
+                    <!-- UserName -->
+                    <div class="row mt-5">
+                        <div class="col-1"></div>
+                        <div class="col-3">
+                            <label><h6>User Name:</h6></label>
+                        </div>
+                        <div class="col-6">
+                            <input (keyup)="checkUserName()" type="text" class="form-control" name="userName" [(ngModel)]="userName">
+                        </div>
+                        <div class="col-2">
+                           <span [ngClass]="{'text-success':isValid,'text-danger':isInvalid}" *ngIf="ShowOrHide">{{message}}</span>
+                        </div>
+                    </div>
+                        <!-- Password -->
+                    <div class="row mt-2">
+                        <div class="col-1"></div>
+                        <div class="col-3">
+                            <label><h6>Password:</h6></label>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" name="password" [(ngModel)]="password">
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                      <!-- Login Button -->
+                    
+                        <div class="text-center mt-5">
+                            <input type="submit" value="Login" class="btn btn-success btn-lg">
+                        </div>
+                    
+                </div>
+            </form>
+
+            </div>
+             <div class="col-2"></div>
+        </div>
+    </div>
+    <div class="card-footer tc">
+    </div>
+    
+    </div>

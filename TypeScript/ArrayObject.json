@@ -1,0 +1,28 @@
+[
+    {
+        "id"   : 101,
+        "name" : "Rahul",
+        "add"  : "CKT"
+    },
+    {
+        "id"   : 102,
+        "name" : "Amit",
+        "add"  : "DLH"
+    },
+    {
+        "id"   : 103,
+        "name" : "Rohan",
+        "add"  : "HYD"
+    },
+    {
+        "id"   : 104,
+        "name" : "Ashish",
+        "add"  : "ALLD"
+    },
+    {
+        "id"   : 105,
+        "name" : "Tamhid",
+        "add"  : "PTN"
+    }
+
+]

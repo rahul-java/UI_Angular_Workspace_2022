@@ -1,0 +1,18 @@
+<table class="table table-hover mt-3">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>TYPE</th>
+            <th>Model</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let uom of uomData">
+           <td>{{uom.id}}</td>
+           <td>{{uom.uomType}}</td>
+           <td>{{uom.uomModel}}</td>
+           <td>{{uom.uomDiscription}}</td>
+        </tr>
+    </tbody>
+</table>

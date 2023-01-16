@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header bg-primary text-center text-white">
+                <h1>Form Validation UserType And ForUser</h1>
+            </div>
+            <div class="card-body">
+          <form id="userSubmit" action="">
+       
+        <!--  User Type -->
+        <div class="row mt-5" >
+            <div class="col-1">
+
+            </div>
+            <div class="col-2">
+                <label >User Type</label>
+            </div>
+            <div class="col-6">
+                <input onclick="autoForUser()" type="radio" id="customer" name="userType" value="CUSTOMER">CUSTOMER 
+                <input onclick="autoForUser()" type="radio" id="vendor" name="userType" value="VENDOR">VENDOR
+                 
+            </div>
+            <div class="col-3 text-danger ">
+                <span id="errorMsg-userType"></span>
+            </div>
+            <!-- <div class="col-2">
+                
+            </div> -->
+        </div><br>
+    
+    <!-- For USer -->
+    <div class="row">
+        <div class="col-1">
+
+        </div>
+        <div class="col-2">
+            <label>For User</label>
+        </div>
+        <div class="col-6">
+             <input type="text" name="forUser" id="forUser" class="form-control" readonly> 
+        </div>
+        <div class="col-1">
+            <span id="errorMsg"></span>
+        </div>
+        <div class="col-2">
+
+        </div>
+  </div><br>
+       
+  <div class="container" align="center">
+    <input type="submit" value="Check Validation" class="btn btn-success">
+    <input type="reset" value="RESET" class="btn btn-success">
+    
+ </div>
+
+    </form>
+    </div>
+    <div class="card-footer bg-primary">
+        <span th:text="${msg}" class="text-white"></span>
+    </div>
+   </div>
+ </div>
+ <script>
+    $(document).ready(function(){
+        $('#errorMsg-userType').hide();
+        var userTypeError=false;
+
+        function userType(){
+            var length=$('[name="userType"]:checked').length;
+            if(length==0){
+                $('#errorMsg-userType').show();
+                $('#errorMsg-userType').text("Please Choose One USer Type");
+                $('#errorMsg-userType').css('color','red');
+            }else{
+                $('#errorMsg-userType').hide(); 
+                userTypeError=true;
+                if($('#customer').is(':checked'))
+                  $('#forUser').val("PURCHASE").focus() ;
+                if($('#vendor').is(':checked'))
+                  $('#forUser').val("SALE").focus() ;
+                
+            }
+            return userTypeError;
+        }
+
+        $('[name="userType"]').click(function(){
+            userType();
+        });
+
+        $('#userSubmit').submit(function (){
+            userType();
+            if(userTypeError)
+            return true;
+            else
+            return false;
+        });
+    });
+ </script>
+</body>
+</html>

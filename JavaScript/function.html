@@ -1,0 +1,25 @@
+<script>
+    function m1(){
+        return "Hello Friends...";
+    }
+
+    console.log(m1());
+
+    function m2(){
+        return m3();
+    }
+    function m3(){
+        return "welcome";
+    }
+    console.log(m2());
+
+    function m4(){
+        return m3;
+    }
+    console.log(m4());
+
+    function m5(){
+        return m3;
+    }
+    console.log(m5()());
+</script>

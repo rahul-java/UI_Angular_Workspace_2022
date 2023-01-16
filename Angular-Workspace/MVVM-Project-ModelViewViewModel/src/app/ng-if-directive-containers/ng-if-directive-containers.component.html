@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header bg-primary text-center text-white">
+                <h1>Structural Directives : ngIf Directive Containers</h1>
+            </div>
+            <div class="card-body">
+          
+        <div class="row mt-5" >
+            <div class="col-1">
+                
+            </div>
+            <div class="col-4">
+                <button class="btn c1" (click)="toggleBtn()">Show {{textBtn}}</button>
+            </div>
+            <div class="col-6 c3 ">
+                <div *ngIf="condition; then thenblock else elseblock">
+
+
+                </div>
+                
+                <ng-template #elseblock>
+                     <h2>ElseBlock Executed</h2>
+                </ng-template>
+
+                <ng-template #firstBlock>
+                    <h2>firstBlock Executed</h2>
+                </ng-template>
+                <ng-template #secondBlock>
+                     <h2>secondBlock Executed</h2>
+                </ng-template>
+            </div>
+            <div class="col-1">
+                
+            </div>
+            
+            
+            
+        </div><br>
+    
+    </div>
+    <div class="card-footer bg-primary">
+        <span ></span>
+    </div>
+   </div>
+ </div>
+ 
+</body>
+</html>

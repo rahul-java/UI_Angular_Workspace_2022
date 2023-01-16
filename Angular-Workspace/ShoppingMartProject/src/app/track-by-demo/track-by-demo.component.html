@@ -1,0 +1,39 @@
+<div class="container">
+    
+    <div class="card">
+    
+    <div class="card-header tc text-center">
+        <h1>Track-By</h1>
+    </div>
+    <div class="card-body">
+
+        <button (click)="AddNewProduct()" class="btn tc">+Add New Product</button>
+    <table class="table table-hover mt-2">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Even</th>
+                <th>Odd</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr [class.even-e]="e" [class.odd-o]="o" *ngFor="let item of Products; 
+                     let i=index; let e=even; let o=odd; trackBy:ChangeTrackBy">
+                <td>{{item.name}}</td>
+                <td>{{item.price}}</td>
+                <td>{{e}}</td>
+                <td>{{o}}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    
+    <div class="card-footer tc"></div>
+    </div>
+    
+    
+    </div>
+    
+    

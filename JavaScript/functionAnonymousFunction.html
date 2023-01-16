@@ -1,0 +1,22 @@
+<!--
+<script>
+var fun1=()=>{
+    return "Rahul Kumar Pandey";
+}
+console.log(fun1);
+console.log(fun1());
+
+</script>
+-->
+
+<script>
+var fun=(arg1,arg2,arg3)=>{
+console.log(arg1,arg2,arg3);
+}
+
+fun(); //o/p: undefined undefined undefined
+fun("Rahul","Kumar","Pandey"); //o/p: Rahul Kumar Pandey
+fun(undefined,"Rahul"); //o/p: undefined 'Rahul' undefined
+fun("Rahul",undefined,null); //o/p: Rahul undefined null
+
+</script>

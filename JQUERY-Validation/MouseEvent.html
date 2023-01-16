@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+</head>
+<body>
+    <p id="pid">Single Click Test</p>
+    <p id="d_pid">Double Click Test</p>
+    <p id="m_pid">Mouse Enter Event Test</p>
+    <p id="ml_pid">Mouse Leave Event Test</p>
+    <script>
+        $(document).ready(function(){
+           $('#pid').click(function(){
+            alert("click event fired..");
+           });
+
+           $('#d_pid').dblclick(function(){
+            alert("double click event fired..");
+           });
+
+           $('#m_pid').mouseenter(function(){
+            alert("mouse enter event fired..");
+           });
+
+           $('#ml_pid').mouseleave(function(){
+            alert("mouse leave event fired..");
+           });
+        });
+    </script>
+</body>
+</html>

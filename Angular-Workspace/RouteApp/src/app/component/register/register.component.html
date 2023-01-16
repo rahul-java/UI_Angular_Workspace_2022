@@ -1,0 +1,62 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-6">
+            <h1>User Registration Form</h1>
+    <form [formGroup]="parentFormGroup" (submit)="FormSubmit(parentFormGroup.value)">
+        <dl >
+            <dt>Name</dt>
+            <dd><input type="text" formControlName="username"></dd>
+
+            <dt>Email</dt>
+            <dd><input type="text" formControlName="email"></dd>
+
+            <div formGroupName="childFormGroup" class="bg-secondary p-5 text-white">
+
+                <dt>Address</dt>
+            <dd>
+                <select formControlName="address" class="form-select" >
+                  <option selected value="-1">--select--</option>
+                  <option>Allahabad</option> 
+                  <option>Lucknow</option> 
+                  <option>Noida</option> 
+                  <option>Delhi</option> 
+                  <option>Gurugram</option> 
+                </select>
+            </dd>
+
+            <dt>Agree</dt>
+            <dd><input type="checkbox" formControlName="agree"></dd>
+
+            </div>
+        </dl>
+        <dt>Upload Image &nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-primary btn-sm" type="button" (click)="AddMoreImg()">add more</button> </dt>
+        <dd *ngFor="let control of ImgControls.controls; let i=index" class="mt-4">
+            <input type="file" name="i">
+            <button (click)="RemoveImg(i)" type="button" class="btn btn-danger btn-sm">remove</button>
+        </dd>
+        <div class="text-center">
+            <button class="btn btn-primary">Register</button>&nbsp;&nbsp;
+            <button (click)="PartialUpdate()" type="button" class="btn btn-warning">Partial Update</button>
+        </div>
+    </form>
+        </div>
+
+        <!-- <div class="col-6">
+            <h1>User Details</h1>
+            <dl>
+                <dt>Name</dt>
+                <dd>{{parentFormGroup.value.username}}</dd>
+    
+                <dt>Email</dt>
+                <dd>{{parentFormGroup.value.email}}</dd>
+    
+                <dt>Address</dt>
+                <dd>{{childFormGroup.value.address}}</dd>
+    
+                <dt>Agree</dt>
+                <dd>{{childFormGroup.value.agree}}</dd>
+            </dl>
+        </div> -->
+    </div>
+</div>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header  text-center prod-temp">
+                <h1>ng-Switch Project</h1>
+            </div>
+            <div class="btn-toolbar prod-temp">
+               <div class="btn-group">
+                  <button name="preview" (click)="view($event)" class="btn prod-temp">Preview</button>
+                  <button name="details" (click)="view($event)" class="btn prod-temp">Details</button>
+                  <button name="description" (click)="view($event)" class="btn prod-temp">Description</button>
+               </div>
+            </div>
+            <div class="card-body">
+          
+        <div class="row bdr" >
+            <div class="col-1">
+                
+            </div>
+            <div class="col-10 text-center">
+               <div [ngSwitch]="selectedView">
+                 <div *ngSwitchCase="'preview'">
+                    <img  [src]="product.img">
+
+                 </div>
+                 <div *ngSwitchCase="'details'">
+                   <div class="card ">
+                    <div class="card-header prod-temp">
+                       <h2>Product Details</h2>
+                    </div>
+                    <div class="card-body">
+                        <h3>Name : {{product.name}}</h3><br>
+                       <h3>Price : {{product.price | currency:'INR'}}</h3>
+                    </div>
+                    <div class="card-footer prod-temp">
+                       <h4>{{(product.inStock==true)?"Available":"Out Of Stock"}}</h4>
+                    </div>
+                   </div>
+                </div>
+                <div *ngSwitchCase="'description'">
+                    <div class="card">
+                        <div class="card-header prod-temp">
+                           <h2>Product Description</h2>
+                        </div>
+                        <div class="card-body">
+                            
+                           <h3> Company :{{product.description.Company}}</h3>
+                           <h3>Model :{{product.description.Model}}</h3>
+                           <h3>Memory :{{product.description.ROM}}</h3>
+                        </div>
+                        <div class="card-footer prod-temp">
+                           <h4>{{(product.inStock==true)?"Available":"Out Of Stock"}}</h4>
+                        </div>
+                       </div>
+
+                </div>
+
+               </div>
+                
+            </div>
+            <div class="col-1">
+                
+            </div>
+        </div><br>
+        
+    </div>
+    <div class="card-footer prod-temp">
+        <span ></span>
+    </div>
+   </div>
+ </div>
+ 
+</body>
+</html>

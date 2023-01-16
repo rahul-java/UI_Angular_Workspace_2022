@@ -1,0 +1,36 @@
+<script>
+
+function m1(arg1,arg2,arg3){
+        return `${arg1} , ${arg2} , ${arg3}`;
+    }
+
+    console.log(m1("SpringBoot","MicroServices","CoreJava"));
+
+function m2(){
+    return "SpringBoot";
+}
+function m3(){
+    return "MicroServices";
+}
+function m4(){
+    return "CoreJava";
+}
+console.log(m2(),m3(),m4());
+console.log(m1(m2(),m3(),m4()));
+console.log(m1(m2,m3,m4));
+
+function n1(arg1,arg2,arg3){
+    console.log(arg1(),arg2(),arg3());
+    }
+
+    function n2(){
+    return "SB";
+}
+function n3(){
+    return "MS";
+}
+function n4(){
+    return "CJ";
+}
+n1(n2,n3,n4);
+</script>

@@ -1,0 +1,38 @@
+<!-- <script>
+
+function fun_f1(...args)
+{
+ console.log(args);
+}
+fun_f1("A","B","C"); //O/P: (3) ['A', 'B', 'C']
+fun_f1();  // []
+fun_f1(undefined);  // [undefined]
+fun_f1(null,null,undefined,undefined);  // (4) [null, null, undefined, undefined]
+
+</script> -->
+
+<!-- <script>
+
+function fun_f1(a1="Angular" ,a2="JavaScript" ,a3="TypeScript")
+{
+    console.log(a1,a2,a3);
+}
+fun_f1();  // Angular JavaScript TypeScript
+fun_f1("SpringBoot");  //SpringBoot JavaScript TypeScript
+fun_f1(undefined,"CoreJava");  // Angular CoreJava TypeScript
+fun_f1(null,undefined,"Adv.JAVA");  // null 'JavaScript' 'Adv.JAVA'
+
+</script> -->
+
+<script>
+
+function fun_f1(a1,a2="RTT",...a3)
+{
+console.log(a1,a2,a3);
+}
+fun_f1();  // undefined 'RTT' []
+fun_f1(null,null,null,null,null,null); //null null (4) [null, null, null, null]
+fun_f1(undefined,undefined,undefined,undefined,undefined,undefined); // undefined 'RTT' (4) [undefined, undefined, undefined, undefined]
+fun_f1("I","love Java","null","Programming","Language","Do","You","?");  //I love Java (6) ['null', 'Programming', 'Language', 'Do', 'You', '?']
+
+</script>

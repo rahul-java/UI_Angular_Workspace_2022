@@ -1,0 +1,22 @@
+.prod-temp{
+    background-color: darkcyan;
+    color: white;
+    
+}
+.prod-temp1{
+    width: 200px;
+    height: 300px;
+    /* padding: 20px;
+    margin-top: 50px;
+    margin: 20px; */
+    
+}
+.bdr{
+    border: 3px solid darkcyan;
+    padding: 20px;
+    border-radius: 10px;
+}
+dl{
+    display: grid;
+    grid-template-columns: 200px 200px;
+}
