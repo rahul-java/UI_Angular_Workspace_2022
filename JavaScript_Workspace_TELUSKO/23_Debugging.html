@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Debugging</title>
+    <script type="text/javascript">
+
+    function addNumbers()
+    {
+        var num1=document.getElementById("n1").value;
+        var num2=document.getElementById("n2").value;
+      
+        document.getElementById("op").innerHTML="Result is : "+(num1+num2);
+        console.log(num1+num2);
+    }
+    </script>
+</head>
+<body>
+
+    <input type="text" id="n1" placeholder="Enter Text">
+    <br><br>
+    <input type="text" id="n2" placeholder="Enter Text">
+    <br><br>
+    
+    <button type="button" onclick="addNumbers()">Add</button>
+<br><br>
+<h2 id="op">Result is </h2>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>obj2</title>
+</head>
+<body>
+    <script type="text/javascript">
+      
+       //creating object
+
+       var str=new String();
+       var str2="Rahul";
+       document.write("<h1>"+typeof(str)+"<h1>");
+        document.write("<h1>"+typeof(str2)+"<h1>");
+
+            var car={
+         
+         car_brand : "Tesla",
+         car_model : "T_model_2023",
+         car_price : 99000,
+
+         teslaAutoPilot : function(){
+            document.write("<h1>The car has auto pilot feature</h1>");
+            document.write("<h1>"+car.car_brand+"</h1>");
+            document.write("<h1>"+car.car_model+"</h1>");
+            document.write("<h1>"+car.car_price+"</h1>");
+         }
+       }
+       car.fuelType="Electric";
+       car.teslaAutoPilot();
+       delete car.car_price;
+       document.write("<h1>"+car.fuelType+"</h1>");
+       document.write("<h1>"+car.car_price+"</h1>");//undefined bcoz car price is deleted.
+
+       car.price="55000";
+       document.write("<h1>"+typeof(car.price)+"</h1>");//string
+    </script>
+
+</body>
+</html>

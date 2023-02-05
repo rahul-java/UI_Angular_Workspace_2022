@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Callback and Chaining in JQuery Effects</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <h1 class="myHeading" id="heading1">Callback and Chaining in JQuery Effects</h1>
+  <p>This is my paragraph...Outside div</p>
+ 
+  <button  id="btntoggle">Toggle</button>
+  <br>
+  <div class="myDivs" id="firstDiv">
+    <p>This is my paragraph...in first div</p>
+    <p>This is my paragraph...in first div</p>
+  </div>
+  <div class="myDivs" id="secondDiv">
+    <p>This is my paragraph...in second div</p>
+  </div>
+  
+</body>
+
+<!-- <script src="jquery/jquery.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+<script>
+// Jquery
+$(document).ready(function(){
+   /*$("#btntoggle").click(function(){
+     $("#firstDiv").fadeToggle(5000,function(){
+        alert("First div is faded");
+     });
+     
+   });
+   $("#btntoggle").click(function(){
+     $("#firstDiv").slideToggle(5000,function(){
+        alert("First div is slided");
+     });
+   });
+
+$("#btntoggle").click(function(){
+     $("#firstDiv").slideToggle(3000,printMsg);
+   });
+   function printMsg()
+   {
+    alert("Effect is done.");
+   }
+   
+*/
+
+$("#btntoggle").click(function(){
+     $("#firstDiv").slideUp(2000).slideDown(2000).fadeOut(1000).fadeIn(3000);
+   });
+
+
+});
+</script>
+</html>

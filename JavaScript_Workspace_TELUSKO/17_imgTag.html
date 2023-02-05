@@ -1,0 +1,22 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>getElementByClassName</title>
+    <script type="text/javascript">
+       function setNewImg()
+       {
+         document.getElementById("img1").src="img/woman.png";
+       }
+       function setOldImg()
+       {
+         document.getElementById("img1").src="img/man.png";
+       }
+    </script>
+</head>
+<body>
+    <img id="img1" src="img/man.png" width="300" onmouseover="setNewImg()" onmouseout="setOldImg()">
+  
+</body>
+</html>

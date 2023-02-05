@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>object</title>
+</head>
+<body>
+    <script type="text/javascript">
+       var car_brand="Tesla";
+       var car_model="T_model_2023";
+       var car_price=99000;
+
+       function teslaAutoPilot()
+       {
+        document.write("<h1>The car has auto pilot feature</h1>");
+       }
+
+       //creating object
+
+       var car={
+         
+         car_brand : "Tesla",
+         car_model : "T_model_2023",
+         car_price : 99000,
+
+         teslaAutoPilot : function(){
+            document.write("<h1>The car has auto pilot feature</h1>");
+            document.write("<h1>"+car.car_brand+"</h1>");
+            document.write("<h1>"+car.car_model+"</h1>");
+            document.write("<h1>"+car.car_price+"</h1>");
+         }
+       }
+       car.teslaAutoPilot();
+    </script>
+
+</body>
+</html>

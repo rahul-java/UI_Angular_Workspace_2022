@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Events in JQuery Part-2</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <h1 class="myHeading" id="heading1">Events in JQuery Part-2</h1>
+  <p>This is my paragraph...Outside div</p>
+    
+  <br>
+  <div class="myDivs" id="firstDiv">
+    <p>This is my paragraph...in first div</p>
+    <p>This is my paragraph...in first div</p>
+  </div>
+  <div class="myDivs" id="secondDiv">
+    <p>This is my paragraph...in second div</p>
+  </div>
+  <div class="myDivs" id="thirdDiv">
+    <ul>
+      <li>list 1</li>
+      <li>list 2</li>
+      <li>list 3</li>
+      <li>list 4</li>
+      <li>list 5</li>
+    </ul>
+  </div>
+  <div>
+    <ul>
+      <li>list 11</li>
+      <li>list 12</li>
+      <li>list 13</li>
+      <li>list 14</li>
+      <li>list 15</li>
+    </ul>
+  </div>
+  <br>  
+  <button  id="btn1">Click Me 1</button>
+  <button  id="btn2">Click Me 2</button>
+</body>
+
+<!-- <script src="jquery/jquery.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+<script>
+// Jquery
+$(document).ready(function(){
+   
+   // $("button").click(fn1);
+  // $("#btn1").dblclick(fn1);
+   $("#btn1").mouseenter(fn1);
+   $("#btn1").mouseleave(fn2);
+
+   $("#btn2").hover(fn1,fn2);
+
+function fn1()
+{
+   $("#firstDiv").fadeOut();  
+}
+function fn2()
+{
+   $("#firstDiv").fadeIn();  
+}
+});
+
+</script>
+</html>

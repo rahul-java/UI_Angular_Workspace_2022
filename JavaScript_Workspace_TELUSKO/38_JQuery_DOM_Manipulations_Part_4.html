@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JQuery DOM Manipulations Part 4</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <h1 class="myHeading" id="heading1">JQuery DOM Manipulations Part 4</h1>
+  
+ 
+  <button  id="btn1">Add Class</button>
+  <button  id="btn2">Remove Class</button>
+
+  <button  id="btn3">Toggle Class</button>
+  <button  id="btn4">CSS</button>
+
+  <br><br>
+  
+  
+  <div class="myDivs" id="firstDiv">
+    This is my <b> 1st paragraph...</b> <i>in first div</i>
+
+    <p id="p2" value="Hello World This is 2023" class="p2Class">This is my <b>2nd paragraph...</b> <i>in first div</i></p>
+</div>
+  
+</body>
+
+<script src="jquery/jquery.js"></script>
+<script>
+// Jquery
+$(document).ready(function(){
+  
+    $("#btn1").click(function(){
+
+        //$("#firstDiv").addClass("newDivClass");
+        $("#firstDiv").addClass("newDivClass newParaClass"); //you can add multiple classes
+        alert("addClass() ::: add one or more classes to the selected elements");
+
+    });
+
+    $("#btn2").click(function(){
+
+      //$("#firstDiv").removeClass("newDivClass");
+      $("#firstDiv").removeClass("newDivClass newParaClass");  ////you can remove multiple classes
+      alert("removeClass() ::: remove one or more classes to the selected elements.");
+     });
+
+    $("#btn3").click(function(){
+
+      $("#firstDiv").toggleClass("newDivClass");
+      alert("toggleClass() ::: toggle between adding/removing classes from the selected elements.");
+      
+    });
+
+    $("#btn4").click(function(){
+
+      alert("padding : "+$("#firstDiv").css("padding"));
+      alert("font-size : "+$("#firstDiv").css("font-size"));
+      $("#firstDiv").css("font-size","30px");
+      alert("font-size : "+$("#firstDiv").css("font-size"));
+      alert("css() ::: sets or returns the style attribute of the selected elements.");
+    });
+
+});
+</script>
+</html>

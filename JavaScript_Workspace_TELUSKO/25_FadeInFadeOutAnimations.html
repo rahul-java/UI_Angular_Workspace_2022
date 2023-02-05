@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fade In Fade Out animations</title>
+    
+    <script type="text/javascript">
+    var opacity=0;
+    var intervalId=0;
+    
+    function fadeIn()
+    {
+        debugger;
+        intervalId=setInterval(show,20);
+    }
+    function fadeOut()
+    {
+        debugger;
+        intervalId=setInterval(hide,20); //20milliseconds
+    }
+    function hide()
+    {
+       var img= document.getElementById("image1");
+        opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity")); //converting string to number Number(....)
+       if(opacity>0)
+       {
+        opacity=opacity-0.1;
+        img.style.opacity=opacity;
+        console.log(opacity);
+       }
+       else
+       {
+        clearInterval(intervalId);
+       }
+    } 
+    function show()
+    {
+       var img= document.getElementById("image1");
+        opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity")); //converting string to number Number(....)
+       if(opacity<1)
+       {
+        opacity=opacity+0.1;
+        img.style.opacity=opacity;
+        console.log(opacity);
+       }
+       else
+       {
+        clearInterval(intervalId);
+       }
+    } 
+    </script>
+</head>
+<body>
+
+    <button type="button" id="startbtn" onclick="fadeOut()">Fade Out</button>
+    <br>
+    <img src="img/operator.png" id="image1"  width="300"> 
+    <!-- style="opacity:1;" -->
+    <br>
+    <button type="button" onclick="fadeIn()">Fade In</button>
+
+</body>
+</html>

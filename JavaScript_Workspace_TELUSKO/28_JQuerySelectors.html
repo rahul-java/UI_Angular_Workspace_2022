@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JQuery Selectors</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <h1 class="myHeading" id="heading1">Selectors in jquery 1</h1>
+  <h1 class="myHeading">Selectors in jquery 2</h1>  
+  <br>
+  <div class="myHeading">
+    <p>This is my paragraph...</p>
+  </div>
+  <br>  
+  <button onclick="fn1()" id="btn1">Click</button>
+</body>
+
+<!-- <script src="jquery/jquery.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+<script>
+    function fn1()
+    {
+       //$("h1").fadeToggle();
+      // $("#heading1").fadeToggle(); //for id
+       $(".myHeading").fadeToggle(); //for class
+    }
+</script>
+</html>

@@ -1,0 +1,35 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>getElementByClassName</title>
+    <script type="text/javascript">
+      function fn1()
+      {
+        var select=document.getElementById("p1");
+        
+      }
+
+      function changeStyling()
+      {
+         var element=document.getElementsByClassName("myPara");
+        for(var i=0;i<element.length;i++)
+        {
+            element[i].style.color="red";
+        }
+      }
+    </script>
+</head>
+<body>
+    <p class="myPara">This is Paragraph no 1.</p>
+    <p >This is Paragraph no 2.</p>
+    <p class="myPara">This is Paragraph no 3.</p>
+    <p >This is Paragraph no 4.</p>
+    <p class="myPara">This is Paragraph no 5.</p>
+    <a href="a" class="myPara">This is an Anchor Tag</a>
+    <br><br>
+  <button onclick="changeStyling()" id="btn1">Click Me</button>
+  
+</body>
+</html>

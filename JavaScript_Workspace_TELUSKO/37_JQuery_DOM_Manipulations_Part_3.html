@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JQuery DOM Manipulations Part 3</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <h1 class="myHeading" id="heading1">JQuery DOM Manipulations Part 3</h1>
+  
+ 
+  <button  id="btn1">Append</button>
+  <button  id="btn2">After</button>
+
+  <button  id="btn3">Prepend</button>
+  <button  id="btn4">Before</button>
+
+  <br><br>
+  <button  id="btn5">Remove</button>
+  <button  id="btn6">Empty</button>
+  <br>
+  
+  <div class="myDivs" id="firstDiv">
+    <p id="p1" value="Hello World This is 2023" class="p1Class">This is my <b> 1st paragraph...</b> <i>in first div</i></p>
+
+    <p id="p2" value="Hello World This is 2023" class="p2Class">This is my <b>2nd paragraph...</b> <i>in first div</i></p>
+</div>
+  
+</body>
+
+<script src="jquery/jquery.js"></script>
+<script>
+// Jquery
+$(document).ready(function(){
+  
+    $("#btn1").click(function(){
+
+        $("#firstDiv").append("<p>append() ::: insert content at the end of the selected elements.</p>");
+        alert("append()");
+
+    });
+
+    $("#btn2").click(function(){
+
+      $("#firstDiv").after("<p>after() ::: insert content after the selected elements.</p>");
+      alert("after()");
+     });
+
+    $("#btn3").click(function(){
+
+      $("#firstDiv").prepend("<p>prepend() ::: insert content at the begining of the selected elements.</p>");
+      alert("prepend()");
+      
+    });
+
+    $("#btn4").click(function(){
+
+      $("#firstDiv").before("<p>before() ::: insert content before the selected elements.</p>");
+      alert("before()");
+    });
+
+    //remove
+    $("#btn5").click(function(){
+
+      $("#firstDiv").remove();
+      //$("p").remove("#p2"); //removes only second paragraph inside div
+     // $("p").remove("#p1,#p2");
+     //$("p").remove(".p1Class,.p2Class");
+      
+       alert(" remove() ::: remove the selected elements.");
+    });
+
+    //empty()
+    $("#btn6").click(function(){
+
+      $("#firstDiv").empty();
+       alert("empty() ::: clear the content inside the selected elements.");
+    });
+
+
+});
+</script>
+</html>

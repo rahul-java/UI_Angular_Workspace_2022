@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>constructor</title>
+</head>
+<body>
+    <script type="text/javascript">
+      
+       //creating object
+
+       function Car(car_brand,car_model,car_price){
+         
+         this.car_brand=car_brand;
+         this.car_model=car_model;
+         this.car_price=car_price;
+
+        this.teslaAutoPilot = function(){
+            document.write("<h1>The car has auto pilot feature</h1>");
+            document.write("<h1>"+this.car_brand+"</h1>");
+            document.write("<h1>"+this.car_model+"</h1>");
+            document.write("<h1>"+this.car_price+"</h1>");
+         }
+       }
+       var c1=new Car("Telsa","model-2023",99999);
+       c1.teslaAutoPilot();
+
+       var c2=new Car("Mercedes","model-2023",55555);
+       c2.teslaAutoPilot();
+
+       document.write(c1.car_brand);
+       document.write(c2.car_model);
+    </script>
+
+</body>
+</html>

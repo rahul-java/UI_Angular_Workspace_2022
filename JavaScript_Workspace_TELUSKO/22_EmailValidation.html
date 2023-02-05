@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Email Validation</title>
+    <script type="text/javascript">
+
+    function validate()
+    {
+      var email=document.getElementById("email").value;
+
+      var regx=/^([a-zA-Z0-9\.-]{2,20})@([a-zA-Z0-9-]+).([a-z]{2,10})(.[a-z]{2,8})$/;
+      //            rahulbca13         @      gamil     .    com /     .in
+      if(regx.test(email))
+      {
+        //alert("valid Mobile");
+        document.getElementById("lbluser").innerHTML="Valid"
+        document.getElementById("lbluser").style.color="green";
+        document.getElementById("lbluser").style.visibility="visible";
+      }
+      else{
+        //alert("Invalid Username");
+        document.getElementById("lbluser").innerHTML="Invalid"
+        document.getElementById("lbluser").style.color="red";
+        document.getElementById("lbluser").style.visibility="visible";
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <input type="text" id="email" placeholder="Enter Email">
+    <label id="lbluser" style="color:red;visibility:hidden;">Invalid Username</label>
+    <br><br>
+    
+    <button type="button" onclick="validate()">Submit</button>
+
+</body>
+</html>

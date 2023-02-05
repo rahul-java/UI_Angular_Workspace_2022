@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM_Select</title>
+    <script type="text/javascript">
+      function fn1()
+      {
+        var select=document.getElementById("selectBox");
+        alert("The Selected Course is : "+select.options[select.selectedIndex].value)
+      }
+    </script>
+</head>
+<body>
+    <select id="selectBox">
+       <option value="JAVA">Java</option>
+       <option value="JAVASCRIPT">JavaScript</option>
+       <option value="SPRINGBOOT">Springboot</option>
+       <option value="ANGULAR">Angular</option>
+       <option value="MICROSERVICES">Microservices</option>
+    </select>
+    <br>
+  <button onclick="fn1()" id="btn1">Click Me</button>
+  
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Date Picker Widget Control in JQuery UI
+    </title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+</head>
+<body>
+  <h1 class="myHeading" id="heading1">Date Picker Widget Control in JQuery UI
+</h1>
+
+  <h1>Introduction to Jquery UI</h1>
+  <div id="myDiv">
+    <input type="text" id="dateInput" placeholder="Select date">
+
+  </div>
+
+</body>
+
+<script src="jquery/jquery.js" type="text/javascript"></script> <!--1...First Include this jquery core first  -->
+<script src="jquery-ui/jquery-ui.js" type="text/javascript"></script><!--2...Secondly Include this jquery-ui at last  -->
+<script>
+  //$("#myDiv").datepicker();
+  //$("#dateInput").datepicker();
+  $("#dateInput").datepicker({
+    numberOfMonths:1,
+    changeYear:true,
+    changeMonth:true,
+    showWeek:true,
+    weekHeader:"Week No",
+    showOtherMonths:true,
+    minDate:new Date(2023,1,5),
+    maxDate:new Date(2025,0,31)
+  });
+</script>
+</html>

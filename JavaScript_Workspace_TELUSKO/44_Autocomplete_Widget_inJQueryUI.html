@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Autocomplete Widget in JQuery UI
+    </title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+</head>
+<body>
+  <h1 class="myHeading" id="heading1">Autocomplete Widget in JQuery UI</h1>
+  <div id="firstDiv" class="myDiv1">
+    <label><b>Enter Your avourite City : </b></label>
+    <input type="text" name="" id="cityTextBox">
+    <br>
+    <button id="btn1">Click to show message box</button>
+  </div>
+
+</body>
+
+<script src="jquery/jquery.js" type="text/javascript"></script> <!--1...First Include this jquery core first  -->
+<script src="jquery-ui/jquery-ui.js" type="text/javascript"></script><!--2...Secondly Include this jquery-ui at last  -->
+<script>
+var myCities=[
+	  "New Delhi","new York","Bengalore","varanas","Mumbai","Manikpur","Noida","Nagpur"		
+	];
+
+    $("#cityTextBox").autocomplete(
+        {
+            source:myCities
+        },
+        {
+            autofocus:true,
+            delay:100,
+            minLength:2
+        }
+    );
+
+</script>
+</html>

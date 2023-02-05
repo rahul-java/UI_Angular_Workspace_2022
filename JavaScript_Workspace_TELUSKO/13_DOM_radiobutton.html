@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM_Radio_Button</title>
+    <script type="text/javascript">
+      function fn1()
+      {
+        
+        var rd1=document.getElementById("rd1");
+        var rd2=document.getElementById("rd2");
+        if(rd1.checked==true)
+        {
+            alert("The Radio Button selected is  : "+rd1.value);
+        }
+        else if(rd2.checked==true)
+        {
+            alert("The Radio Button selected is  : "+rd2.value);
+        }
+        
+      }
+    </script>
+</head>
+<body>
+    <input type="radio" id="rd1" name="group1" value="Java">JAVA</input>
+    <br>
+    <input type="radio" id="rd2" name="group1" value="JavaScript">JAVASCRIPT</input>
+    <br>
+  <button onclick="fn1()" id="btn1">Click Me</button>
+  
+</body>
+</html>

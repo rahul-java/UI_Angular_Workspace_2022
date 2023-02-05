@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Zoom In Zoom Out effect</title>
+    
+    <script type="text/javascript">
+   
+   var width=200;
+    var difference=2;
+    var intervalId=0;
+
+    
+    function increase()
+    {
+        clearInterval(intervalId);
+        intervalId=setInterval(expand,10);
+    }
+    function expand()
+    {
+        if(width<600)
+        {
+            width=width+difference;
+            document.getElementById("image1").style.width=width+"px";
+            console.log(width);
+        }
+        else
+        {
+            clearInterval(intervalId);
+        }
+    }
+    function decrease()
+    {
+        clearInterval(intervalId);
+        intervalId=setInterval(shrink,10);
+    }
+    function shrink()
+    {
+        if(width>200)
+        {
+            width=width-difference;
+            document.getElementById("image1").style.width=width+"px";
+            console.log(width);
+        }
+        else
+        {
+            clearInterval(intervalId);
+        }
+    }
+    </script>
+</head>
+<body>
+
+    <br>
+    <br>
+    <img src="img/heart.jpg" id="image1"  width="200" onmouseover="increase()" onmouseout="decrease()" />
+    
+    <br>
+    
+
+</body>
+</html>
