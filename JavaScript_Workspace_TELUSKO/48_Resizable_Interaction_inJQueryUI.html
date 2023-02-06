@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Resizable Interaction in JQuery UI
+    </title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+</head>
+<body>
+  <h1 class="myHeading" id="heading1">Resizable Interaction in JQuery UI</h1>
+  <div id="myDiv" class="myDivs">
+    
+      <img width="200" src="img/woman.png" id="resize" style="border: 2px solid blueviolet;">
+    
+  </div>
+</body>
+
+<script src="jquery/jquery.js" type="text/javascript"></script> <!--1...First Include this jquery core first  -->
+<script src="jquery-ui/jquery-ui.js" type="text/javascript"></script><!--2...Secondly Include this jquery-ui at last  -->
+<script>
+ // $("#resize").resizable();
+ $("#resize").resizable({
+    maxWidth:500,
+    maxHeight:500,
+    autoHide:true,
+    ghost:true,
+    aspectRatio:true
+
+ });
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Draggable Interaction in JQuery UI
+    </title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+</head>
+<body>
+  <h1 class="myHeading" id="heading1">Draggable Interaction in JQuery UI</h1>
+  <div style="border: 1px solid black;">
+    <div class="cube">
+        <h3>CUBE 1</h3>
+
+    </div>
+    <div class="cube">
+        <h3>CUBE 2</h3>
+
+    </div>
+  </div>
+</body>
+
+<script src="jquery/jquery.js" type="text/javascript"></script> <!--1...First Include this jquery core first  -->
+<script src="jquery-ui/jquery-ui.js" type="text/javascript"></script><!--2...Secondly Include this jquery-ui at last  -->
+<script>
+  //$(".cube").draggable();
+  $(".cube").draggable({
+     //axis:"y", //only top to bottom y axis draggable only
+    //axis:"x", //from left to right (Only one work at a time either  x or y)
+   // containment:"parent",  // not drag out of the container area (container area : div)
+    //containment:"document"  // entire document page
+    cursor:"grabbing",  //hand cursor
+    opacity:0.5,  // fade 0.5
+    //grid:[300,300], //moves only 300px at a time 
+    snap:true, // stick to each other when they come closer to eachother
+    snapTolerance:30 // min px distance require to snapping to happen to stick each other
+      });
+</script>
+</html>

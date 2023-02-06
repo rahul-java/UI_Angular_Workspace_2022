@@ -35,3 +35,11 @@ div p{
   font-weight: bold;
   color: brown;
 }
+.cube{
+  width: 150px;
+  height: 150px;
+  background-color: rgba(255, 102, 0, 0.856);
+  padding: 20px;
+  margin: 10px;
+  display: inline-block;
+}
